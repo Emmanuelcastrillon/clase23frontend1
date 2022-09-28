@@ -1,0 +1,101 @@
+@import"./componentes/tituloencabezado";
+@import"./componentes/encabezado";
+@import"./componentes/navegacion";
+@import"./componentes/enlaces";
+@import"./componentes/seccion1";
+@import"./componentes/caja1";
+@import"./componentes/tituloprincipal";
+@import"./componentes/fondo1";
+@import"./componentes/parrafo1";
+@import"./componentes/boton";
+@import"./componentes/formulario";
+@import"./componentes/imagenprincipal";
+@import"./componentes/seccion2";
+@import"./componentes/viñete";
+@import"./componentes/fondo2";
+@import"./recursos/variables";
+@import"./componentes/pie";
+@import"./componentes/redes";
+@import"./componentes/footerimg.scss";
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+.encabezado{
+    @extend .encabezado;
+    h3{
+        @extend .tituloencabezado;
+    }
+    nav{
+        @extend .navegacion;
+        a{
+            @extend .enlaces;
+        }
+    }
+}
+.seccion1{
+    @extend .seccion1;
+    .caja1{
+        @extend .caja1;
+        .h1{
+            @extend .tituloprincipal;
+            .fondo1{
+                @extend .fondo1;
+            }
+        }
+        p{
+            @extend .parrafo1;
+        }
+        form{
+            @extend .formulario;
+            button{
+                @extend .boton;
+            }
+        }
+    }
+    .caja2 img{
+        @extend .imagenprincipal;
+    }
+}
+.seccion2{
+    @extend .seccion2;
+    div{
+        width: map-get($caja456,ancho);
+        height: map-get($caja456,alto);
+        background-color: map-get($caja456,fondo );
+        z-index: map-get($caja456, index);
+        span{
+            @extend .viñete;
+        }
+        h4{
+            font-weight: map-get($subtitulo,grueso ) ;
+            font-size: map-get($subtitulo,tamaño );
+            padding: map-get($subtitulo,pading);
+           .fondo2{
+                @extend .fondo2;
+            }
+        }
+        p{
+            font-size: map-get($parrafo,tamaño);
+            line-height: map-get($parrafo,alto );
+            padding: map-get($parrafo,pading);
+        }
+    }
+}
+footer{
+    @extend .pie;
+    .redes{
+        @extend .redes;
+    }
+    img{
+        @extend .footerimg;
+    }
+}
+
+
+
+
+
+
+
+

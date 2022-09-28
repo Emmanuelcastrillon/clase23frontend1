@@ -1,0 +1,9 @@
+.enlaces{
+    text-decoration: none;
+    color: black;
+    transition: ease-in-out 500ms;
+    &:hover{
+        color: chartreuse;
+        font-size: 30px;
+    }
+}
